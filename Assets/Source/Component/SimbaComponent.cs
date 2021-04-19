@@ -2,17 +2,17 @@
 
 namespace Simba
 {
-    public abstract partial class SingleInstanceMonoBehaviour : MonoBehaviour
+    public abstract partial class SimbaComponent : MonoBehaviour
     {
         internal void Awake()
         {
-            MonoBehaviours.Add(this);
+            Add(this);
             OnAwake();
         }
         
         internal void OnDestroy()
         {
-            MonoBehaviours.Remove(this);
+            Remove(this);
             OnOnDestroy();
         }
         

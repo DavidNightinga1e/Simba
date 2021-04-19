@@ -1,23 +1,22 @@
 ﻿using Simba;
-using Simba.OrderedBehaviour;
 using UnityEngine;
 
 namespace Example
 {
-    public class FirstBehaviour : IStartOrderedBehaviour, IUpdateOrderedBehaviour
+    public class FirstBehaviour : IStartSystem, IUpdateSystem
     {
-        private TextController _textController;
+        private TextComponent _textComponent;
 
-        private const string InitializingMessage = "<color=#996600>FirstBehaviour</color>: Initializing\n";
+        private const string InitializingMessage = "<color=#009900>FirstBehaviour</color>: Initializing\n";
         private static string GetIterationMessage(int iteration) =>
-            $"<color=#996600>FirstBehaviour</color>: iteration {iteration}, false -> true";
+            $"<color=#009900>FirstBehaviour</color>: Iteration {iteration}, false -> true\n";
         
         private const string UpdateErrorMessage = "<color=#cc0000>FirstBehaviour encountered IsUpdated == true</color>\n";
         private const string InitializationErrorMessage = "<color=#cc0000>FirstBehaviour encountered IsInitialized == true</color>\n";
 
         public void Start()
         {
-            _textController = SingleInstanceMonoBehaviour.Find<TextController>();
+            _textComponent = SimbaComponent.Get<TextComponent>();
 
             if (ProcessEnvironment.IsInitialized) 
                 Print(InitializationErrorMessage);
@@ -42,7 +41,7 @@ namespace Example
         private void Print(string str)
         {
             Debug.Log(str);
-            _textController.Text += str;
+            _textComponent.Text += str;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Example
 {
-    public class TextController : SingleInstanceMonoBehaviour
+    public class TextComponent : SimbaComponent
     {
         [SerializeField] private TextMeshProUGUI textMeshPro;
 

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Simba.OrderedBehaviour;
+using Simba;
 
 namespace Example
 {
-    public class ExampleRunner : OrderedBehaviourRunner
+    public class ExampleRunner : SystemRunner
     {
-        protected override List<IOrderedBehaviour> OrderedBehaviours { get; } = new List<IOrderedBehaviour>
+        protected override List<ISystem> Systems { get; } = new List<ISystem>
         {
             new FirstBehaviour(),
             new SecondBehaviour(),
