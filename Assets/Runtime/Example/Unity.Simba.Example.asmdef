@@ -1,0 +1,16 @@
+{
+    "name": "Unity.Simba.Example",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a7ccf5cf131135541b7d79c61a3e1e0c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
