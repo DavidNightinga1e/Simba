@@ -1,0 +1,17 @@
+{
+  "name": "com.nightingale.simba",
+  "version": "0.1.0",
+  "displayName": "Simba",
+  "description": "ECS-like behaviour in more simple way",
+  "unity": "2020.3",
+  "unityRelease": "0f1",
+  "keywords": [
+    "ECS",
+    "System"
+  ],
+  "author": {
+    "name": "David Nightingale",
+    "email": "nightrider2552@gmail.com",
+    "url": "https://github.com/DavidNightinga1e"
+  }
+}
